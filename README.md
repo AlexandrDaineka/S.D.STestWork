@@ -20,6 +20,18 @@
 spring.datasource.username=${SPRING_DATASOURCE_USERNAME:postgres}
 spring.datasource.password=${SPRING_DATASOURCE_PASSWORD:qwerty}
 
+Скрипт для создания таблицы !
+
+CREATE TABLE student (
+    id SERIAL PRIMARY KEY,
+    last_name VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    middle_name VARCHAR(255),
+    student_group VARCHAR(50) NOT NULL,
+    average_grade DECIMAL(3, 2) NOT NULL
+);
+> **Примечание:** Я хотел сделать микрации через `Liquibase`, но в задании этого небыло и я не стал мудрить.
+
 ### Шаг 3: Запуск приложения
 
 Запустите приложение в вашей IDE. 
