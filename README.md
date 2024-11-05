@@ -43,11 +43,12 @@ spring.datasource.password=${SPRING_DATASOURCE_PASSWORD:qwerty}
 
 4. Для доступа к защищенным эндпоинтам в Postman, в разделе **Authorization** выберите `Bearer Token` и вставьте `access_token`, полученный на предыдущем шаге.
 
-Пример получения токена:
+Пример полученого токена:
 ![image](https://github.com/user-attachments/assets/8918192e-1f4b-4131-889a-8f72b7f0f15b)
 
 Вот как выглядит процесс получения токена:
-![image](https://github.com/user-attachments/assets/891e1d4d-14d6-40f3-9f77-21b6ced6a206)
+![image](https://github.com/user-attachments/assets/1070f9a5-fc78-4b33-97dc-77dcd3bad714)
+
 
 ### Шаг 5: Взаимодействие с эндпоинтами
 
@@ -68,18 +69,24 @@ spring.datasource.password=${SPRING_DATASOURCE_PASSWORD:qwerty}
 
 ![image](https://github.com/user-attachments/assets/176d97a3-bf87-4414-a268-5ee358b2e05c)
 
-Метод  DELETE
-В хедерах указываем id студента который нам нарвится меньше всего и удаляем его! в ответ получаем статус 204 о том что контент успешно удален!
+#### Метод DELETE: Удаление студента
+
+В хедерах указываем `id` студента который нам нарвится меньше всего и удаляем его! После отправки запроса вы получите статус `204`, что означает, что удаление прошло успешно и контент был удален.
+
 ![image](https://github.com/user-attachments/assets/f6ed7b73-820a-4d3b-a689-b31aa1af4718)
 
-Метод GET:
-получаем спесок всех студентов! дополнительно указывать ничего не надо кроме токена авторизации!
-![image](https://github.com/user-attachments/assets/d5cebf27-67ad-44f0-a007-8d9a53fad588)
+#### Метод GET: Получение списка всех студентов
 
-Метод POST:
-Изменяем студента
+Отправляем запрос для получения списка всех студентов. Дополнительно ничего указывать не нужно, кроме токена авторизации `Bearer Token`.
+
+![image](https://github.com/user-attachments/assets/d5cebf27-67ad-44f0-a007-8d9a53fad588)
+#### Метод POST: Обновление данных студента
+
+После отправки запроса можно проверить изменения, выполнив запрос `GET` для получения обновленных данных студента.
+
+Пример запроса на изменение данных студента:
 ![image](https://github.com/user-attachments/assets/0568b57f-2579-49fb-8b00-e457476d64b8)
-после изменения студента можем проверить методом гет действительно ли он изменился!
+после изменения студента можем проверить методом `GET` действительно ли он изменился!
 ![image](https://github.com/user-attachments/assets/f873cb38-7d9f-4b24-bd2d-580796e55820)
 
 
